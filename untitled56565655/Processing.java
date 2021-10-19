@@ -1,5 +1,7 @@
 import processing.core.*;
 
+// hello, Dr. Kessner was here
+
 public class Hello extends PApplet
 {
     public void settings()
