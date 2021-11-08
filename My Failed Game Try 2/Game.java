@@ -5,6 +5,11 @@ public class Game extends PApplet{
     size(1410, 810);
   }
   public void setup(){
+    int[][] block = {{0, 1, 0, 0, 1},
+                      {0, 1, 1, 0, 0},
+                      {0, 1, 0, 1, 0},
+                      {0, 1, 1, 1, 1}
+                    };
     p = new Player(this);
     blocks = new ArrayList<Block>();
 
@@ -26,8 +31,14 @@ public class Game extends PApplet{
     for(int i = 0; i < this.height+30; i+=30){
       blocks.add(new Block(this, width - 15, i-15));
     }
-    for(int i = 0; i < 10; i++){
-      blocks.add(new Block(this, this.random(47)*30+15, this.random(27)*30+15));
+    for(int i = 0; i < block.length; i++){
+      for(int j = 0; j < block[i].length; j++){
+        int x = 30*j;
+        int y = 30*i;
+        if(block[i][j] == 1){
+          blocks.add(new Block(this, x+15, y+15));
+        }
+      }
     }
   }
   public void draw(){

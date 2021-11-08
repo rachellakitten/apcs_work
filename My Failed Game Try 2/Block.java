@@ -19,13 +19,13 @@ public class Block{
   }
 
   public boolean isInside(float px, float py){
-    if(px >= this.x-15 && px <= this.x && py >= this.y-15 && py <= this.y){
+    if(px +15>= this.x-15 && px <= this.x && py +15>= this.y-15 && py <= this.y){
       return true;
-    }else if(px >= this.x-15 && px <= this.x && py <= this.y+15 && py >= this.y){
+    }else if(px +15>= this.x-15 && px <= this.x && py -15<= this.y+15 && py >= this.y){
       return true;
-    }else if(px <= this.x+15 && px >= this.x && py <= this.y+15 && py >= this.y){
+    }else if(px -15<= this.x+15 && px >= this.x && py -15<= this.y+15 && py >= this.y){
       return true;
-    }else if(px <= this.x+15 && px >= this.x && py >= this.y-15 && py <= this.y){
+    }else if(px -15<= this.x+15 && px >= this.x && py +15>= this.y-15 && py <= this.y){
       return true;
     }
     return false;

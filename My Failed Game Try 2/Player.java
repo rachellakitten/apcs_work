@@ -19,7 +19,7 @@ public class Player{
 
     isInsideABlock = false;
     for(Block b : blocks){
-      if(b.isInside(x+2*vx, y+2*vy)){
+      if(b.isInside(x+vx, y+vy)){
         isInsideABlock = true;
       }
     }
