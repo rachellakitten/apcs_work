@@ -5,10 +5,11 @@ public class Game extends PApplet{
     size(1410, 810);
   }
   public void setup(){
-    int[][] block = {{0, 1, 0, 0, 1},
-                      {0, 1, 1, 0, 0},
-                      {0, 1, 0, 1, 0},
-                      {0, 1, 1, 1, 1}
+    int[][] block = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                     {1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0},
+                     /*{0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
+                     {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
+                     {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0},*/
                     };
     p = new Player(this);
     blocks = new ArrayList<Block>();
@@ -19,9 +20,6 @@ public class Game extends PApplet{
     for(int i = 0; i < this.width; i+=30){
       blocks.add(new Block(this,i, 0));
     }*/
-    for(int i = 0; i < this.height; i+=30){
-      blocks.add(new Block(this, 15, i-15));
-    }
     for(int i = 0; i < this.width; i+=30){
       blocks.add(new Block(this,i-15, 15));
     }
