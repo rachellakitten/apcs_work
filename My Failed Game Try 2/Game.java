@@ -59,13 +59,13 @@ public class Game extends PApplet{
     }
 
     if(up == true && down == false){
-      p.setVY(-10);
+      p.setVY(-1);
     }else if(down == true && up == false){
-      p.setVY(10);
+      p.setVY(1);
     }else if(left == true && right == false){
-      p.setVX(-10);
+      p.setVX(-1);
     }else if(right == true && left == false){
-      p.setVX(10);
+      p.setVX(1);
     }
   }
   public void keyReleased(){
