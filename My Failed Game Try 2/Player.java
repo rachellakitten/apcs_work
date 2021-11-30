@@ -4,9 +4,9 @@ public class Player{
   public Player(PApplet p){
     this.p = p;
     this.c = p.color(255, 0, 107);
-    this.s = 20;
-    this.x = 60;
-    this.y = p.height - 60;
+    this.s = 40;
+    this.x = 120;
+    this.y = p.height - 120;
     this.vx = 0;
     this.vy = 0;
     this.isInsideABlock = false;
@@ -31,6 +31,14 @@ public class Player{
       y += vy*2.5;
     }
 
+    /*p.noStroke();
+    p.fill(153, 76, 0);
+    p.rectMode(p.CORNER);
+    p.rect(0, 0, x-200, p.height);
+    p.rect(x+200, 0, p.width-x-200, p.height);
+    p.rect(0, 0, p.width, y-100);
+    p.rect(0, y+100, p.width, p.height-y-100);*/
+
   }
   public void setVX(float n){
     vx = n;
@@ -43,6 +51,12 @@ public class Player{
   }
   public float getVY(){
     return vy;
+  }
+  public float getX(){
+    return x;
+  }
+  public float getY(){
+    return y;
   }
 
   private PApplet p;

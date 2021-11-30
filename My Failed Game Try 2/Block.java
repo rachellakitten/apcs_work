@@ -9,7 +9,7 @@ public class Block{
   public void display(){
     p.rectMode(p.CENTER);
     p.fill(c);
-    p.rect(x, y, 30, 30);
+    p.rect(x, y, 60, 60);
   }
   public float getX(){
     return x;
@@ -19,13 +19,13 @@ public class Block{
   }
 
   public boolean isInside(float px, float py){
-    if(px +10>= this.x-15 && px <= this.x && py +10>= this.y-15 && py <= this.y){
+    if(px +20>= this.x-30 && px <= this.x && py +20>= this.y-30 && py <= this.y){
       return true;
-    }else if(px +10>= this.x-15 && px <= this.x && py -10<= this.y+15 && py >= this.y){
+    }else if(px +20>= this.x-30 && px <= this.x && py -20<= this.y+30 && py >= this.y){
       return true;
-    }else if(px -10<= this.x+15 && px >= this.x && py -10<= this.y+15 && py >= this.y){
+    }else if(px -20<= this.x+30 && px >= this.x && py -20<= this.y+30 && py >= this.y){
       return true;
-    }else if(px -10<= this.x+15 && px >= this.x && py +10>= this.y-15 && py <= this.y){
+    }else if(px -20<= this.x+30 && px >= this.x && py +20>= this.y-30 && py <= this.y){
       return true;
     }
     return false;
