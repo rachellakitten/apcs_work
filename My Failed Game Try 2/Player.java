@@ -4,12 +4,13 @@ public class Player{
   public Player(PApplet p){
     this.p = p;
     this.c = p.color(255, 0, 107);
-    this.s = 30;
+    this.s = 20;
     this.x = 60;
     this.y = p.height - 60;
     this.vx = 0;
     this.vy = 0;
     this.isInsideABlock = false;
+    this.howMuchInside = 0;
   }
 
   public void display(ArrayList<Block> blocks){
@@ -26,8 +27,8 @@ public class Player{
     if(isInsideABlock == true){
 
     }else{
-      x += vx;
-      y += vy;
+      x += vx*2.5;
+      y += vy*2.5;
     }
 
   }
@@ -52,4 +53,5 @@ public class Player{
   private float vx;
   private float vy;
   private boolean isInsideABlock;
+  private float howMuchInside;
 }
