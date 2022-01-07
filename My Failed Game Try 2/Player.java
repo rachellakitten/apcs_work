@@ -11,9 +11,10 @@ public class Player{
     this.vy = 0;
     this.isInsideABlock = false;
     this.howMuchInside = 0;
+    this.passed = false;
   }
 
-  public void display(ArrayList<Block> blocks){
+  public void display(ArrayList<Block> blocks, ArrayList<Exit> exits){
     p.fill(c);
     p.rectMode(p.CENTER);
     p.rect(x, y, s, s);
@@ -31,13 +32,11 @@ public class Player{
       y += vy*2.5;
     }
 
-    /*p.noStroke();
-    p.fill(153, 76, 0);
-    p.rectMode(p.CORNER);
-    p.rect(0, 0, x-200, p.height);
-    p.rect(x+200, 0, p.width-x-200, p.height);
-    p.rect(0, 0, p.width, y-100);
-    p.rect(0, y+100, p.width, p.height-y-100);*/
+    for(Exit e : exits){
+      if(e.isInside(x, y)){
+        passed = true;
+      }
+    }
 
   }
   public void setVX(float n){
@@ -68,4 +67,5 @@ public class Player{
   private float vy;
   private boolean isInsideABlock;
   private float howMuchInside;
+  public boolean passed;
 }
