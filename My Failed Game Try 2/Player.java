@@ -57,6 +57,12 @@ public class Player{
   public float getY(){
     return y;
   }
+  public void setX(float n){
+    x = n;
+  }
+  public void setY(float n){
+    y = n;
+  }
 
   private PApplet p;
   private int c;
