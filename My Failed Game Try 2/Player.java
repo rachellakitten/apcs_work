@@ -28,8 +28,8 @@ public class Player{
     if(isInsideABlock == true){
 
     }else{
-      x += vx*2.5;
-      y += vy*2.5;
+      x += vx*3;
+      y += vy*3;
     }
 
     for(Exit e : exits){
