@@ -37,6 +37,11 @@ public class VehicleStats{
     vehicles.add(new Car());
     vehicles.add(new Motorcycle());
 
+    ArrayList<Vehicle> test = new ArrayList<Vehicle>();
+    test.add(new Bicycle());
+    test.add(new Unicycle());
+
     testWheelNumber(vehicles, 9);
+    testHumanPowered(vehicles, test);
   }
 }
