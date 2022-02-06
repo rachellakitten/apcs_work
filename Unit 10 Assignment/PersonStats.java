@@ -44,7 +44,7 @@ public class PersonStats{
     return false;
   }
   public static boolean testManyPets(ArrayList<Person> persons, ArrayList<String> expected){
-    if(mostPets(persons).equals(expected)){
+    if(manyPets(persons).equals(expected)){
       return true;
     }
     return false;
