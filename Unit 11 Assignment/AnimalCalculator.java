@@ -8,7 +8,32 @@ public class AnimalCalculator{
   public static int avgLegs(ArrayList<Animal> animals){
     int count = 0;
     for(Animal a : animals){
+      count += a.getLeg();
+    }
+    return count / animals.size();
+  }
 
+  public static int fewLegs(ArrayList<Animal> animals){
+    int count = animals.get(0).getLeg();
+    for(int i = 0; i < animals.size(); i++){
+      if(animals.get(i).getLeg() < count){
+        count = animals.get(i).getLeg();
+      }
+    }
+    return count;
+  }
+  public static void testAvgLegs(ArrayList<Animal> animals, float expected){
+    if(avgLegs(animals) == expected){
+      System.out.println("true");
+    }else{
+      System.out.println("false");
+    }
+  }
+  public static void testFewLegs(ArrayList<Animal> animals, float expected){
+    if(fewLegs(animals) == expected){
+      System.out.println("true");
+    }else{
+      System.out.println("false");
     }
   }
   public static void main(String[] args){
@@ -28,5 +53,7 @@ public class AnimalCalculator{
     animals.add(zerolegs);
 
     getInfo(animals);
+    testAvgLegs(animals, 22);
+    testFewLegs(animals, 0);
   }
 }
