@@ -23,6 +23,8 @@ public class VehicleStats{
       System.out.println("false");
     }
   }
+
+  //doesnt work
   public static void testHumanPowered(ArrayList<Vehicle> vehicles, ArrayList<Vehicle> expected){
     if(humanPowered(vehicles).equals(expected)){
       System.out.println("true");
