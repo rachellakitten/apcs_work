@@ -1,5 +1,5 @@
 public class Animal{
-  public Animal(String name){
+  public Animal(String name, int legCount, boolean furry){
     this.name = name;
     this.legCount = legCount;
     this.furry = furry;
@@ -12,6 +12,9 @@ public class Animal{
   }
   public boolean furry(){
     return furry;
+  }
+  public String info(){
+    return "Name: " + name + " Legs: " + legCount + " Furriness: " + furry;
   }
 
   private String name;
