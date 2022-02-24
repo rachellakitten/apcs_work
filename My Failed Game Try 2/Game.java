@@ -6,7 +6,6 @@ public class Game extends PApplet{
   }
   public void setup(){
 
-
     p = new Player(this);
     initOne();
 
@@ -28,6 +27,7 @@ public class Game extends PApplet{
     }
   }
   public void initTwo(){
+    color(255, 255, 255);
     blocks = new ArrayList<Block>();
     exits = new ArrayList<Exit>();
 
@@ -76,6 +76,7 @@ public class Game extends PApplet{
       }
       if(p.poisoned == true){
         gameState = -1;
+        p.setPoisoned(false);
       }
 
   }
@@ -137,6 +138,9 @@ public class Game extends PApplet{
       }
 
     }
+    if(gameState == -1){
+      gameState = 2;
+    }
   }
   public void keyReleased(){
     if(key == 'w'){
@@ -168,6 +172,7 @@ public class Game extends PApplet{
   private int gameState = 0;
   private int c = this.color(153, 76, 0);
   private int level = 1;
+  private boolean isPoison = false;
   private int[][] one = {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
     {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2},
     {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2},

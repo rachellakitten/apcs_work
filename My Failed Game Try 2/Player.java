@@ -68,6 +68,9 @@ public class Player{
   public void setY(float n){
     y = n;
   }
+  public void setPoisoned(boolean n){
+    poisoned = n;
+  }
 
   private PApplet p;
   private int c;
