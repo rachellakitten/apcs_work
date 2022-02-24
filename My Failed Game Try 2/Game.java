@@ -20,7 +20,7 @@ public class Game extends PApplet{
         int x = 60*j;
         int y = 60*i;
         if(one[i][j] == 1){
-          blocks.add(new Block(this, x+30, y+30));
+          blocks.add(new Block(this, x+30, y+30, false));
         }else if(one[i][j] == 2){
           exits.add(new Exit(this, x+30, y+30));
         }
@@ -36,7 +36,7 @@ public class Game extends PApplet{
         int x = 60*j;
         int y = 60*i;
         if(two[i][j] == 1){
-          blocks.add(new Block(this, x+30, y+30));
+          blocks.add(new Block(this, x+30, y+30, true));
         }else if(two[i][j] == 2){
           exits.add(new Exit(this, x+30, y+30));
         }
@@ -73,6 +73,9 @@ public class Game extends PApplet{
         p.setX(120);
         p.setY(this.height - 120);
         p.passed = false;
+      }
+      if(p.poisoned == true){
+        gameState = -1;
       }
 
   }

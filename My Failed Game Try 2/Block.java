@@ -1,10 +1,11 @@
 import processing.core.*;
 public class Block{
-  public Block(PApplet p, float x, float y){
+  public Block(PApplet p, float x, float y, boolean poison){
     this.p = p;
     this.c = p.color(153, 76, 0);
     this.x = x;
     this.y = y;
+    this.poison = poison;
   }
   public void display(){
     p.rectMode(p.CENTER);
@@ -16,6 +17,10 @@ public class Block{
   }
   public float getY(){
     return y;
+  }
+
+  public boolean getPoison(){
+    return poison;
   }
 
   public boolean isInside(float px, float py){
@@ -34,4 +39,5 @@ public class Block{
   private int c;
   private float x;
   private float y;
+  private boolean poison;
 }

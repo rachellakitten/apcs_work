@@ -12,8 +12,8 @@ public class Player{
     this.isInsideABlock = false;
     this.howMuchInside = 0;
     this.passed = false;
+    this.poisoned = false;
   }
-
   public void display(ArrayList<Block> blocks, ArrayList<Exit> exits){
     p.fill(c);
     p.rectMode(p.CENTER);
@@ -23,6 +23,11 @@ public class Player{
     for(Block b : blocks){
       if(b.isInside(x+vx, y+vy)){
         isInsideABlock = true;
+        if(b.getPoison()){
+          poisoned = true;
+        }else{
+          poisoned = false;
+        }
       }
     }
     if(isInsideABlock == true){
@@ -74,4 +79,5 @@ public class Player{
   private boolean isInsideABlock;
   private float howMuchInside;
   public boolean passed;
+  public boolean poisoned;
 }
