@@ -22,7 +22,7 @@ public class ArrayStuff{
   public static int aWords(String[][] nums){
     int count = 0;
     for(int i = 0; i < nums.length; i++){
-      for(int j = 0; j < nums.length[i]; j++){
+      for(int j = 0; j < nums[i].length; j++){
         if(nums[i][j].substring(0, 1).equals("A")){
           count++;
         }
@@ -33,7 +33,7 @@ public class ArrayStuff{
   public static void main(String[] args){
     int[][] count = new int[10][10];
     for(int i = 0; i < count.length; i++){
-      for(int j = 0; j < count.length[i]; j++){
+      for(int j = 0; j < count[i].length; j++){
         if(i == j){
           count[i][j]= 1;
         }else{
@@ -48,7 +48,7 @@ public class ArrayStuff{
   };
   int[][] nums = new int[5][5];
   for(int i = 0; i < nums.length; i++){
-    for(int j = 0; j < nums.length[i]; j++){
+    for(int j = 0; j < nums[i].length; j++){
       nums[i][j]= 10*(i+1) + j;
     }
   }
